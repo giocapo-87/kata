@@ -1,0 +1,19 @@
+Kata utilizza il database MySQL
+Prima di startare l'applicativo è necessario verificare le seguenti proprietà di connessione al DB all'interno
+dell'application.properties:
+
+	1- spring.datasource.url=jdbc:mysql://0.0.0.0:3306/kata?createDatabaseIfNotExist=true
+	2- spring.datasource.username=kata
+	3- spring.datasource.password=socialKata!
+	
+Per startare l'applicativo è necessario i seguenti comandi:
+
+	1- mvn clean install
+	2- java -jar target/Kata-0.0.1-SNAPSHOT.jar
+	
+I comandi accettati sono i seguenti:
+
+	1- <username> -> <message> (per postare un nuovo messaggio. Se l'utente non esiste viene creato automaticamente)
+	2- <username> (per leggere i messaggi dell'utente)
+	3- <username> follows <otherUser> (per iniziare a seguire un utente)
+	4- <username> wall (per vedere il wall di un utente)
